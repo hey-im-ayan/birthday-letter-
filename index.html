@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Birthday Surprise 🎀</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700&family=Poppins:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div id="app">
+   <!-- PARTY POPPER BLAST -->
+<div class="popper left-popper">🎉</div>
+<div class="popper right-popper">🎊</div>
+
+
+
+  <!-- PAGE 1 -->
+  <div class="page active" id="page-1">
+
+    <img src="assets/image/5.png" class="corner c1">
+    <img src="assets/image/6.png" class="corner c2">
+
+    <h1 class="title">✨ Happy Birthday Nandi ✨</h1>
+
+    <p class="subtitle">
+     This little thing was made just for you—because you matter 💗
+    </p>
+
+    <img src="assets/gifs/shinchan.gif" class="sticker" alt="cute">
+
+    <button id="startBtn">Lets Go 🎀</button>
+
+  </div>
+
+  <!-- PAGE 2 -->
+ <div class="page" id="page-2">
+    <img src="assets/image/8.png" class="corner d1">
+    <img src="assets/image/hello.png" class="corner d2">
+ <h1 class="title">✨ A letter for u  ✨</h1>
+
+  <div class="envelope" id="envelope">
+
+    <!-- flap -->
+    <div class="flap"></div>
+
+    <!-- letter -->
+    <div class="letter" id="letter">
+      <p id="typedText"></p>
+      <button class="continue-btn">Continue ✨</button>
+    </div>
+
+    <!-- body -->
+    <div class="body"></div>
+
+    <!-- seal -->
+    <div class="seal" id="seal">💗</div>
+
+  </div>
+ <br>
+
+  <p class="tap-text">click to open birthday letter 💌</p>
+  
+
+ 
+
+ </div>
+ <!-- PAGE 3 : CAKE CUTTING -->
+ <div class="page" id="page-3">
+    <img src="assets/image/love.png" class="corner e1">
+    <img src="assets/image/kitten.png" class="corner e2">
+
+  <h2 class="cake-title">🎂 It's Cake Time!</h2>
+  <p class="cake-subtitle"> Cutting cake, making memories. ✨</p>
+
+  <div class="cake-box">
+
+    <!-- candle -->
+    <div class="candle">
+      <div class="flame"></div>
+    </div>
+
+    <!-- cake -->
+    <div class="cake">
+      <div class="cake-top"></div>
+      <div class="cake-body"></div>
+
+      <!-- cut line -->
+      <div class="cut-line" id="cutLine"></div>
+    </div>
+    <p class="drag-text">👉 Drag from left to right to cut 🍰</p>
+  </div>
+  </div>
+ <!-- PAGE 4 : MAKE A WISH -->
+ <div class="page" id="page-4">
+
+  <h2 class="wish-title">🎂 Time to Make a Wish!</h2>
+  <p class="wish-subtitle">Close your eyes and make your birthday wish ✨</p>
+
+  <!-- MEDIA BOX -->
+  <div class="wish-media">
+    <video src="assets/media/rajee.mp4"
+         autoplay
+         loop
+         muted
+     
+         playsinline>
+   </video>
+ </div>
+
+
+  <p class="wish-text">
+    Think of something wonderful—you deserve it 🌟
+  </p>
+
+  <button class="wish-btn" id="wishDoneBtn">
+    I've Made My Wish! 🌈
+  </button>
+
+</div>
+
+<!-- PAGE 5 : PLAYLIST -->
+<div class="page" id="page-5">
+
+  <h1 class="music-title">Birthday Special Playlist 🎶</h1>
+  <p class="music-subtitle">Choose your birthday soundtrack ✨</p>
+
+  <!-- PLAYLIST -->
+  <div class="playlist">
+
+    <div class="song-card" data-song="assets/music/1.mp3">
+      <img src="assets/image/cat2.jpeg" alt="song 1">
+      <p> Khulke jeene ka 🫠 🤌🏻</p>
+    </div>
+
+    <div class="song-card" data-song="assets/music/3.mp3">
+      <img src="assets/image/cat ꨄ︎.jpeg" alt="song 2">
+      <p> Woh din bhi✨ </p>
+    </div>
+
+    <div class="song-card" data-song="assets/music/2.mp3">
+      <img src="assets/image/cat3.jpeg" alt="song 3">
+      <p> Jaan Nisaar 🎶</p>
+    </div>
+
+  </div>
+
+  <button class="cute-btn" id="musicContinue">
+    Continue to Birthday Surprise ✨
+  </button>
+
+</div>
+
+<!-- BACKGROUND AUDIO (HIDDEN) -->
+<audio id="bgMusic" loop></audio>
+
+
+
+<!-- PAGE 6 : BIRTHDAY WISH CARDS -->
+<div class="page" id="page-6">
+
+  <h2 class="wish-title">Birthday Wishes Cards 🎁</h2>
+  <p class="wish-subtitle">Click each card to reveal a birthday message!</p>
+
+  <div class="wish-cards">
+
+    <div class="wish-card" onclick="flipCard(this)">
+      <img src="assets/gifs/wish1.gif" alt="Wish 1">
+      <div class="card-back">Tor jonno cake choto, wish boro 😌🎂,
+        Tor smile-ta aaj mandatory 😄
+      </div>
+    </div>
+
+    <div class="wish-card" onclick="flipCard(this)">
+      <img src="assets/gifs/wish2.gif" alt="Wish 2">
+      <div class="card-back">Aaj tui boss, cake ta employee 😎🎂,
+       Smile kor, cake judge korche 👀🎂 
+      </div>
+    </div>
+
+    <div class="wish-card" onclick="flipCard(this)">
+      <img src="assets/gifs/wish3.gif" alt="Wish 3">
+      <div class="card-back">Happy Birthday, Nandi 🎂,
+       🤏 cake share korte hobe na 😜 
+      </div>
+    </div>
+
+  </div>
+
+  <div class="progress-text">Progress: <span id="flipPercent">0%</span></div>
+
+  <button id="finalBtn" onclick="goToPage(7)" style="display:none">
+    Final Surprise 🎉
+  </button>
+
+</div>
+<!-- PAGE 7 : FINAL BIRTHDAY LETTER -->
+<div class="page" id="page-7">
+
+  <!-- TOP CAPTION -->
+  <h2 class="final-title">Final Birthday Letter 💌</h2>
+  <p class="final-subtitle">A special message sealed with thoughts 💖</p>
+
+  <!-- LETTER CARD -->
+  <div class="final-letter-card">
+
+    <!-- CORNER GIF (DEMO – replace later) -->
+    <img src="assets/gifs/box.gif" class="letter-gif" alt="corner gif">
+
+    <!-- LETTER HEADER -->
+    <div class="letter-header">
+      💌 Final Birthday Letter
+    </div>
+
+    <!-- LETTER CONTENT (AUTO TYPE) -->
+    <div class="letter-content" id="finalTypedText">
+      <!-- typing text will appear here -->
+    </div>
+
+    <!-- SIGNATURE -->
+    <div class="letter-sign">
+      — From Mee 🤍, who cares deeply 💗<br>
+      <span id="todayDate"></span>
+    </div>
+
+    <hr>
+
+    <!-- ACTION BUTTONS -->
+    <div class="letter-actions">
+      <button id="sealLetterBtn">Seal The Letter 💖</button>
+      <button id="restartBtn">Experience Again 🔁</button>
+    </div>
+
+  </div>
+
+  <!-- SEAL DIALOG (HIDDEN INITIALLY) -->
+  <div class="seal-dialog" id="sealDialog">
+    <div class="seal-box">
+      💖
+      <p>Birthday letter sealed with thoughts </p>
+      <button id="sendThanksBtn"> yeas I'm happy  🎉</button>
+    </div>
+  </div>
+
+</div>
+
+
+
+ <!-- BOTTOM WISH -->
+  <div class="bottom-wish">
+    made with 💗 just for you
+  </div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
